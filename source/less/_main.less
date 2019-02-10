@@ -2,7 +2,12 @@
     width: 100%;
     padding-right: @side-width + @gap;
     float: left;
-
+    .header-anchor{
+        margin-right: 5px;
+    }
+    .footnotes-sep{
+        margin-top: 5px;
+    }
     .post-list {
         position: relative;
         margin: 0px auto;
@@ -35,7 +40,10 @@
         column-break-inside: avoid;
         break-inside: avoid-column;
         height: auto;
-        max-width: 50%;
+
+        @media(min-width: @on-phone) {
+            max-width: 50%;
+        }
     }
 
     .mobile-post() {
