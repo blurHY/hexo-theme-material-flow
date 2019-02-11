@@ -2,18 +2,24 @@
     width: 100%;
     padding-right: @side-width + @gap;
     float: left;
-    .header-anchor{
+    display: flex;
+    justify-content: stretch;
+
+    .header-anchor {
         margin-right: 5px;
     }
-    .footnotes-sep{
+
+    .footnotes-sep {
         margin-top: 5px;
     }
+
     .post-list {
         position: relative;
         margin: 0px auto;
         columns: 400px;
         column-gap: 0;
         margin: -@gap /2;
+        min-width: 0 !important;
 
         @media(max-width: @on-phone) {
             margin: 0;
@@ -41,9 +47,7 @@
         break-inside: avoid-column;
         height: auto;
 
-        @media(min-width: @on-phone) {
-            max-width: 50%;
-        }
+        width: 100%;
     }
 
     .mobile-post() {
