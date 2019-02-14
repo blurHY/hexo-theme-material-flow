@@ -4,7 +4,7 @@
   <% if (page.permalink){ %>
   var disqus_url = '<%= page.permalink %>';
   <% } %>
-  (function(){
+  (function () {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
@@ -19,19 +19,43 @@
 <script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>
 <%- js('js/jquery.fitvids.js') %>
 <script>
-	var GOOGLE_CUSTOM_SEARCH_API_KEY = "<%- theme.search.google_api_key %>";
-	var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "<%- theme.search.google_engine_id %>";
-	var ALGOLIA_API_KEY = "<%- theme.search.algolia_api_key %>";
-	var ALGOLIA_APP_ID = "<%- theme.search.algolia_app_id %>";
-	var ALGOLIA_INDEX_NAME = "<%- theme.search.algolia_index_name %>";
+  var GOOGLE_CUSTOM_SEARCH_API_KEY = "<%- theme.search.google_api_key %>";
+  var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "<%- theme.search.google_engine_id %>";
+  var ALGOLIA_API_KEY = "<%- theme.search.algolia_api_key %>";
+  var ALGOLIA_APP_ID = "<%- theme.search.algolia_app_id %>";
+  var ALGOLIA_INDEX_NAME = "<%- theme.search.algolia_index_name %>";
   var AZURE_SERVICE_NAME = "<%- theme.search.azure_service_name %>";
   var AZURE_INDEX_NAME = "<%- theme.search.azure_index_name %>";
   var AZURE_QUERY_KEY = "<%- theme.search.azure_query_key %>";
   var BAIDU_API_ID = "<%- theme.search.baidu_api_id %>";
   var SEARCH_SERVICE = "<%- theme.search.service %>";
-  var ROOT = "<%- config.root %>"||"/";
-  if(!ROOT.endsWith('/'))ROOT += '/';
+  var ROOT = "<%- config.root %>" || "/";
+  if (!ROOT.endsWith('/')) ROOT += '/';
 </script>
 <%- js('js/search.js') %>
 <%- js('js/app.js') %>
+<script>
+  window.dataLayer = window.dataLayer || [];
 
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-134175489-1');
+</script>
+<!-- Fathom - simple website analytics - https://github.com/usefathom/fathom -->
+<script>
+  (function(f, a, t, h, o, m){
+    a[h]=a[h]||function(){
+      (a[h].q=a[h].q||[]).push(arguments)
+    };
+    o=f.createElement('script'),
+    m=f.getElementsByTagName('script')[0];
+    o.async=1; o.src=t; o.id='fathom-script';
+    m.parentNode.insertBefore(o,m)
+  })(document, window, '//stats.blurhy.xyz/tracker.js', 'fathom');
+  fathom('set', 'siteId', 'PLJQY');
+  fathom('trackPageview');
+  </script>
+  <!-- / Fathom -->

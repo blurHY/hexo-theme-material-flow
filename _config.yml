@@ -49,3 +49,4 @@ social:
 - slug: rss
 	url: /atom.xml
 
+disqus_shortname: blurhy
