@@ -1,15 +1,6 @@
 # Material Flow
 
-__由于本人将博客系统转到hugo上，本Hexo主题将只进行bug修复__   
-安利一发我为hugo写的相同风格的主题： [YAMT](https://github.com/stkevintan/sfork)
-
-
-Yet Another Material-Design-Style Hexo Theme.[DEMO](https://kntan.coding.me/kntan/)  
-
-<div>
-<img width="75%" src='https://raw.githubusercontent.com/stkevintan/hexo-theme-material-flow/master/snapshots/index.png' />
-<img width="20%" src='https://raw.githubusercontent.com/stkevintan/hexo-theme-material-flow/master/snapshots/phone.png' />
-</div>
+Modfied version by blurHY
 
 ## Installation
 ```bash
